@@ -1,0 +1,23 @@
+# Demo: construido con Cursor 🛠️
+
+Esta carpeta es tu prueba de que **construyes**, no solo enseñas. Un proyecto pequeño pero real, documentado mostrando el proceso con Cursor.
+
+> Sugerencia: elige algo de tu mundo (AWS / ágil). Ej.: un CLI que genera plantillas de historias de usuario, o una mini-app que consulta precios de servicios AWS. Pequeño y terminado > grande e incompleto.
+
+## Qué documentar (esto es lo que convence)
+
+1. **El reto** — qué construiste y por qué.
+2. **El proceso con Cursor** — 3-4 capturas o snippets del loop Planear→Delegar→Revisar.
+3. **Las `rules` que usaste** — enlaza a `../playbook/rules-ejemplos`.
+4. **Aprendizajes** — qué delegaste, qué revisaste a mano, qué te sorprendió.
+
+## Estructura sugerida
+
+```
+demo/
+├── README.md          ← este archivo (luego, el writeup del proyecto)
+├── src/               ← el código del demo
+└── .cursor/rules/     ← las reglas reales que usaste
+```
+
+*Próximo paso: define el demo y lo construimos juntos. Te ayudo a elegir el alcance para que sea impresionante pero terminable en una tarde.*
