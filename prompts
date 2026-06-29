@@ -1,0 +1,61 @@
+# Biblioteca de prompts en español 🗣️
+
+Prompts probados, organizados por tarea. Copia, ajusta el contexto entre `[corchetes]` y úsalos en el chat de Cursor (Cmd/Ctrl+L) o en modo Agente.
+
+> Principio: un buen prompt da **objetivo + contexto + restricciones + formato de salida**.
+
+---
+
+## 🔍 Entender código ajeno
+
+```
+Explícame qué hace [archivo/función]. Asume que conozco [lenguaje] pero
+no este proyecto. Dame: 1) el propósito en una frase, 2) las entradas y
+salidas, 3) cualquier efecto secundario o riesgo que deba vigilar.
+```
+
+## 🐛 Depurar
+
+```
+Este error aparece: [pega el error]. Aquí el código relevante: [@archivo].
+Antes de proponer un fix, dime tu hipótesis de la causa raíz. Luego propón
+el cambio mínimo y explica por qué resuelve la causa, no solo el síntoma.
+```
+
+## 🏗️ Implementar una feature
+
+```
+Como [rol], quiero [feature], para [beneficio].
+Criterios de aceptación:
+- [criterio 1]
+- [criterio 2]
+Restricciones: usa [stack/librería], respeta el estilo del repo.
+Antes de codear, lista los archivos que tocarás. Trabaja en pasos revisables.
+```
+
+## ♻️ Refactorizar con seguridad
+
+```
+Refactoriza [@archivo] para mejorar [legibilidad/rendimiento/X] sin cambiar
+el comportamiento. Mantén la API pública igual. Si no hay pruebas, sugiérelas
+primero. Muéstrame el diff y explica cada cambio en una línea.
+```
+
+## 📝 Documentar
+
+```
+Genera un README en español para este proyecto basándote en el código real
+(no inventes funcionalidades). Incluye: qué resuelve, cómo instalarlo, cómo
+usarlo y un ejemplo. Tono claro, para alguien de nivel intermedio.
+```
+
+## 🧪 Generar pruebas
+
+```
+Escribe pruebas para [@función] usando [framework]. Cubre el caso feliz,
+los bordes y al menos un caso de error. Explica qué riesgo cubre cada prueba.
+```
+
+---
+
+¿Tienes un prompt que te funciona en español? Abre un PR y agrégalo. 🙌
