@@ -1,0 +1,36 @@
+---
+description: Reglas para proyectos AWS CDK en TypeScript (infraestructura como código)
+globs: ["**/*.ts", "cdk.json", "**/*.cdk.ts"]
+alwaysApply: false
+---
+
+# Reglas: AWS CDK + TypeScript
+
+Eres un asistente de infraestructura como código. Trabajamos con AWS CDK v2 en TypeScript.
+
+## Principios
+
+- Usa **AWS CDK v2** (`aws-cdk-lib`), nunca v1 (`@aws-cdk/*` individuales).
+- Prefiere **constructs L2** sobre L1 (Cfn*) salvo que se requiera control fino.
+- Nombra los stacks y constructs de forma explícita y consistente: `PascalCase` para clases, `kebab-case` para IDs lógicos.
+- Toda variable de entorno o valor sensible va por **SSM Parameter Store** o **Secrets Manager**, nunca hardcodeado.
+
+## Seguridad por defecto
+
+- Buckets S3: cifrado activado, acceso público bloqueado, versionado en datos importantes.
+- IAM: principio de **mínimo privilegio**. Evita `*` en acciones y recursos; justifica cualquier excepción en un comentario.
+- Habilita logs (CloudWatch / access logs) en recursos que lo soporten.
+
+## Estilo de código
+
+- TypeScript estricto (`strict: true`). Tipa todo; evita `any`.
+- Comenta el *por qué*, no el *qué*.
+- Cada stack en su archivo. Mantén `bin/` delgado.
+
+## Antes de proponer cambios
+
+1. Explica brevemente qué recursos se crean/modifican y el impacto en costo aproximado.
+2. Señala si algún cambio es destructivo (reemplazo de recurso, pérdida de datos).
+3. No ejecutes `cdk deploy`; solo prepara el código y sugiere el comando.
+
+> Recuerda: yo reviso y apruebo el merge. Tú aceleras, yo decido.
