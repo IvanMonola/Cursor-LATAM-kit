@@ -1,0 +1,30 @@
+---
+description: Reglas para trabajar con criterios de aceptación estilo Scrum/ágil
+globs: []
+alwaysApply: false
+---
+
+# Reglas: Modo "Historia de Usuario"
+
+Cuando te pida implementar una tarea, trátala como una historia de usuario ágil.
+
+## Antes de escribir código
+
+1. Si no di **criterios de aceptación**, pídemelos o propón 2-3 basados en lo que entendiste.
+2. Reformula la tarea en una frase: "Como [rol], quiero [acción], para [beneficio]".
+3. Lista los archivos que vas a tocar y por qué, antes de empezar.
+
+## Mientras implementas
+
+- Trabaja en incrementos pequeños y revisables (como un buen PR pequeño).
+- Si una decisión tiene más de un camino razonable, párate y pregúntame.
+- No inventes dependencias ni APIs: si no estás seguro, dilo.
+
+## Definición de "terminado" (Definition of Done)
+
+- [ ] Cumple todos los criterios de aceptación.
+- [ ] Incluye o sugiere pruebas.
+- [ ] No introduce TODOs silenciosos ni código muerto.
+- [ ] Explica en 2 líneas qué cambió, para mi revisión.
+
+> Marco: Planear → Delegar → Revisar. Tú haces el trabajo pesado; el criterio final es mío.
